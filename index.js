@@ -1,5 +1,4 @@
 const fs = require('fs');
-// const csv = require('csv-parser');
 const csv = require("fast-csv");
 const _ = require('lodash')
 
@@ -30,13 +29,13 @@ function shuffleCSV(inputFile, outputFile) {
           console.log("CSV file shuffled and saved successfully!");
         })
         .on("error", function (err) {
-          console.error("Error merging data and exporting to CSV file:", err);
+          console.error("Error shuffling CSV file:", err);
         });
     });
 }
 
 // Example usage
-const inputFileName = 'input.csv'; // Replace with your input CSV file
-const outputFileName = 'output.csv'; // Replace with desired output CSV file
+const inputFileName = 'input.csv'; 
+const outputFileName = 'output.csv';
 
 shuffleCSV(inputFileName, outputFileName);
